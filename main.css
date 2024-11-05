@@ -1,0 +1,144 @@
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  scroll-behavior: smooth;
+
+  --primary-color: #1171a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+section {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  outline: 2px solid black;
+  border-radius: 8px;
+}
+
+form {
+  width: 100%;
+}
+
+h2,
+label {
+  color: var(--primary-color);
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  padding: 10px;
+}
+
+input:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+form#bookForm>div:not(:nth-child(5)) {
+  display: flex;
+  flex-direction: column;
+}
+
+form#bookForm div>input[type="text"],
+form#bookForm div>input[type="number"] {
+  display: block;
+  margin-bottom: 12px;
+}
+
+form#bookForm button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+form#searchBook {
+  display: flex;
+  align-items: center;
+}
+
+input#searchBookTitle {
+  flex-grow: 2;
+  margin: 0 8px;
+}
+
+button#searchSubmit {
+  flex-grow: 1;
+}
+
+div#incompleteBookList,
+div#completeBookList {
+  width: 100%;
+}
+
+div#incompleteBookList>div,
+div#completeBookList>div {
+  outline: 2px solid black;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+div#incompleteBookList>div>div,
+div#completeBookList>div>div {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+div#incompleteBookList>div>div button,
+div#completeBookList>div>div button {
+  width: 100%;
+}
